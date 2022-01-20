@@ -1,0 +1,2 @@
+git add <archivo> : pasar el archivo al stange area para confirmar
+git commit -m <".. / titulo descriptivo sobre el cambio y el archivo"> 
