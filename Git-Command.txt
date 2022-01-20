@@ -7,6 +7,8 @@ git status : para ver el estado actual de los archivos, si estan en proceso de s
 
 Versiones 
 	{
+		las versiones se mueve de arriba hacia abajo, la version de arriba es la mas reciente y la version de mas abajo es la mas 
+		vieja
 		git log : ver los archivos ya confirmados y su identificador de version
 		git checkout < iniciales del identificador del archivo > : ir a una version en especifico
 		git checkout <nombre de la rama>/master : volver a la ultima version
