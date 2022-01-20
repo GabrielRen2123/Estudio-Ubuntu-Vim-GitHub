@@ -2,14 +2,39 @@ git init : para empezar un repositorio
 
 Pasar al stage area (Siempre antes del git commit hacer el git add)
 	git add <archivo> : pasar el archivo al stange area para confirmar
+	git add . : pasar todos los archivos al stage area
 	git commit -m <".. / titulo descriptivo sobre el cambio y el archivo"> 
-git status : para ver el estado actual de los archivos, si estan en proceso de se subidos o no
+	git status : para ver el estado actual de los archivos, si estan en proceso de se subidos o no
 
 Versiones 
 	{
 		las versiones se mueve de arriba hacia abajo, la version de arriba es la mas reciente y la version de mas abajo es la mas 
 		vieja
-		git log : ver los archivos ya confirmados y su identificador de version
+		git log / git log --oneline : ver los archivos ya confirmados y su identificador de version
 		git checkout < iniciales del identificador del archivo > : ir a una version en especifico
 		git checkout <nombre de la rama>/master : volver a la ultima version
 	}
+Deshacer cambios y recuperar archivos
+	{
+		git reset <iniciales del identificador> : sirve para desacer un archivo del stage area
+		git reset --hard <identificador> : los cambios por encima de esa version se borran
+		rm <archivo> : borrar archivo en la carpeta
+		git restore <archivo borrado> : recuperar un archivo que se a borrado, pero no --hard
+		
+	}
+subir archivos a mi repositorio en github
+	{
+		git add remote origin git@github.com:GabrielRen2123/Estudio-Ubuntu-Vim-GitHub.git / enlace del repositorio en git hub
+		git remote -v : ver a donde y de donde se descarga codigo
+		git push -u origin master : conectarnos con nuestro repositorio en la nube (Pero antes de eso tener una clave publica)
+		
+		|||| Claves |||||
+		
+		Ir a ajustes de Git hub clase ssh, nueva, titulo, y la clave
+		ssh-keygen -t ed25519 -C "your_email@example.com" : crear clave ssh
+		cd .ssh : entrar donde se guarda la contra
+		cat <clave en .ssh  que acaba en .pub> : para saber el numero de clave para git hub (cat id_ed25519.pub)
+		despues de eso ya se puede subir el codigo
+		git push -u origin master : poner las cosas
+	}
+ 
