@@ -1,0 +1,79 @@
+	-Vim
+	
+		J : Arriba
+		K : Abajo
+		L : Derecha
+		H : Izquierda
+	
+		Entrar en Modo Insert  :
+	 
+	 		i : entrar en modo insert
+		Guardar cambios:
+			Escape para salir del modo insert
+			
+			< :w > : Guardar cambios
+			< :wq > || < :x > || sift+zz : Guardar y salir
+			< :wq! > || < :x! > : Guardar y salir sin pregunta
+		
+		set nu : agregar numeros de lineas
+		set nu! :quitar numeros de lineas
+		
+		set background= dark/light : cambiar el color de las palabras segun el color de consola
+		
+		vim <nomber.json> : crear archivo nuevo
+		u : control-z
+		
+		control-r : volver a delante
+		/<texto> : buscar texto
+		
+		gg : principio del archivo
+		G : final del archivo
+		dd : cortar
+		yy : copiar
+		p : pegar
+		
+		v : modo visual
+		:q || q! : salir sin guardar
+		
+		a : appeend empieza a escribir desde el final del siguiente caracter
+		s : sustituir, borra el caracter donde estamos y podemos empezar a escribir
+		
+		I : insentar al principio de la linea
+		A: te lleva al final de la linea
+		
+		Para varios archivos
+		{
+		
+		:n : me enviara al siguiente archivo
+		:N : me de volvera al archivo anterior
+		
+		:buffers me mostrara cuantos archivos abiertos estan y donde estoy
+		
+		# : Nos indica que el fichero ha sido abierto y que hemos pasado por él,
+		    aunque ahora no nos encontremos en el mismo, por lo que se encuentra abierto en segundo plano.
+		
+		%a : Indica que es el archivo en el que nos encontramos y está siendo editado.
+		
+		Un espacio en blanco : Indica que el fichero ha sido abierto, pero aún no hemos pasado por dicho archivo.
+		
+		}
+		
+		r<caracter> : remplaza el caracter que tenemos ahora mismo
+		R<cadena/s de texto> : remplazar cadenas completas de texto 
+		
+		control+d : baja media pagina
+		contol+u : subir media pagina
+		
+		control+f : bajar al final de la pagina
+		control+b :subir al princpio de la pagina
+		
+		G : bajar a lo ultimo de todo
+		gg : subir a al principio de todo
+		
+		control+e : bajar un poco la imagen/pantalla
+		control+y : subir un poco la imagen/pantalla
+		
+		control+r = contron-z
+		u = borrar los comabios hechos
+		
+		

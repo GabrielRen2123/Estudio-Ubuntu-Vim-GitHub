@@ -1,2 +1,13 @@
-git add <archivo> : pasar el archivo al stange area para confirmar
-git commit -m <".. / titulo descriptivo sobre el cambio y el archivo"> 
+git init : para empezar un repositorio
+
+Pasar al stage area (Siempre antes del git commit hacer el git add)
+	git add <archivo> : pasar el archivo al stange area para confirmar
+	git commit -m <".. / titulo descriptivo sobre el cambio y el archivo"> 
+git status : para ver el estado actual de los archivos, si estan en proceso de se subidos o no
+
+Versiones 
+	{
+		git log : ver los archivos ya confirmados y su identificador de version
+		git checkout < iniciales del identificador del archivo > : ir a una version en especifico
+		git checkout <nombre de la rama>/master : volver a la ultima version
+	}

@@ -1,0 +1,309 @@
+	--Command
+	
+		exit : cerrar la consola
+		pwd : Saber en que carpeta esta actualmente
+		
+		archivos ocultos tiene un punto antes del nombre, se crean de la misma manera <.oculto>
+		ls : listar archivos
+		{
+			ls : ver lo que hay
+			ls -s : sale con el numero y la enumeracion de archivos/carpetas que haya
+			ls -l : muestra todo y sus permisos como mas detalles de cada fichero
+			ls -a : muestra archivos ocultos
+
+			
+		}
+		
+		cd : Cambiar de Carpeta
+		cd ./(./ dice la direccion desde donde estamos) <nombre de carpetas etc> : me lleva al directorio
+		crear Carpeta ( Directorio ) , borrar, mover y renombrar
+		{
+			mkdir <nombre de la carpeta> : crear Carpeta / Directorio
+			rmdir <nombre de la carpeta> : Remover Carpeta / Directorio
+			
+			(Eliminar carpetas con contenido adentro ""Si se elimina, se elimina todo sin posibilidad de recuperacion"")
+			rm -r <carpeta(archivo)> : elimina todo lo que contenga esa carpeta sin posiblidad de recuperacion
+			rm -r -i || rm -ri<carpeta> : pregunta archivo por archivo cual queremos borrar 
+			cp -r <La carpeta> < a donde > : copiar carpetas con todo el contenido
+		}
+		
+		control+l = clear la terminal
+		sudo !! : para ejecutar el comando anterior sin volver a escribirlo con sudo
+		
+		crear archivos(fichero) && borrar
+		{
+			touch <nombre del archivo(ficher-o).extension zb txt>... : touch prueba.txt
+			rm <fichero(archivo) : borrar el archivo
+			mv (ruta)<archivo> <ruta a mover> : mover archivo
+			mv (ruta)<archivo> <nombre nuevo> : renombrar archivo
+			cp (ruta)<archivo> <ruta a copiar> : copiar archivo
+		}
+		
+		echo <texto> : escribir plabras en consola 
+		echo <text> > (con dos >> se anadir en lugar de reemplazar ) <nombe del archivo .txt .py. etc> : escribir en un fichero cambiando la salida output de 1 a fichero
+		<comando > > <nombre del archivo .txt .py etc> : se escribe el resultado del comando en el fichero
+		cat <fichero> || <fichero> <fichero> : se puede leer lo que tiene un archivo o concatenar diferentes archivos
+		tr -s <caracter> : elimina caracteres repetidos cuando se usa con echo
+		
+		su <nombre_de_cuenta> : cambiar de usario
+		sudo su : entrar en el root
+		su root : entrar en root pero con la contra del root
+		
+		grub 
+		{
+			Es el que se encargar de la inicializacion de Linux (dual boot)
+			sudo nano /etc/default/grub : sirve para cambiar estas opciones como otras
+			
+			/boot/grub/grub.cfg es donde se encuentra el script de este
+	
+			update-grup : para actualizar los cambios del grub
+		}
+		
+		getor de paquetes apt - snap Desinstalacion e instalacion
+		
+		{
+			apt list : lsita de paquetes instalados 
+			sudo apt update : busca las actulizaciones de los paquetes
+			sudo apt upgrade : acutaliza los paquetes
+			sudo apt-get --purge remove : remover desinstalar un programa/paquete
+		}
+		
+		Permisos en Linux
+		{
+		
+			r : read
+			w : write
+			e : execute
+			
+			chmod u|g|o(+|-)r|w|x <archivo>
+			
+			u : Usuario
+			g : Grupo
+			o : Otros
+		}
+	
+		Enlaces en linux 
+		//Para crear enlaces, lo archivos enlazados no deben existir explico//
+		ln <archivo a enlazar(1)> <archivo que se enlazara(2)> el segundo parametro no debe existir, si no que se crea con 		el comando propio
+				
+		ln <(ruta) archivo> <nombre del enlace/archivo> : esto es para hacer clones de un archivo, lo que se hace en uno se 		modifica en el otro
+		ln -s <(ruta) archivo> <nombre del enlace/archivo> : esto es para crear un enlace suave (simbolico) es como hacer 		un icono directo para no tener que 
+												ir por todos los directorios. Tambien se modifican mutuamente
+		
+		regex (Expresiones regulares)
+		{
+		
+		* Cero o más caracteres, ejemplos:
+
+			todos los archivos: *
+			todos los archivos html: *.html
+			todos los archivos que empiezan por f: f*
+				
+		
+		? Un único carácter cualquiera, ejemplos:
+			
+			todos los archivos txt con un solo carácter: ?.txt
+			todos los txt que empiezan por 'a' seguidos de un carácter: a?.txt
+			
+		
+		[ ] Cumple la expresión si contiene uno de los caracteres incluidos, ejemplos:
+		
+			Los archivos fA.txt, fB.txt y fC.txt: f[ABC].txt
+			Para invertir la expresión se usa " ^ ", por ejemplo:
+			
+			Ficheros txt de nombre f que no acaban en A, B o C: f[^ABC].txt
+			Para especificar rangos, se usa " - ":
+			
+			Ficheros txt de nombre f que acaban en un dígito: f[0-9].txt
+			Ficheros txt de nombre f que acaban en dos dígito: f[0-9][0-9].txt
+			Ficheros txt de nombre f que acaban en una mayúscula: f[A-Z].txt
+			Los que acaban en una minúscula o mayúscula: f[a-zA-Z].txt
+		
+		
+		{ } Igual que el anterior, pero para más caracteres en lugar de uno solo:
+		
+		    Archivos fAB.txt y fDC.txt: f{AB,DC}.txt
+		    
+		
+		}
+		
+		find <ruta donde lo queremos buscar> - name < el archivho a buscar> : esto sirve para buscar un archivo											
+		tree <ruta> : sirve para ver de forma grafica directorios en la consola y sus contenido
+		grep <caracter o palabra> <archivo en el que buscar> : esto es para buscar algo en conquetro entre archivos
+		
+		stdin standar input = 0 : entrada de teclado // redirigir entrada con (<) 
+		stdout standar output = 1 : salida a pantalla // redirigir salida con (>) {Linea 42-43}					
+		stderr standar erro = 2 : salida de error a la pantalla									
+		
+		Tuberia
+		
+		redirigir la salida de un comando para poder buscar algo en concreto
+		Ejemplo para buscar un paquete : apt list | grep <paquete a buscar> : asi sin necesidad de redirigir el resultado de la lista a un archivo .txt y buscar con el grep despues el paquete 
+		
+		cut <-d> " " -f<el campo la columna // para mas columnas solo se separan los numeros con una coma eje: 1,3 > : para cortar la columna o senttencia que queremosd de un fichero
+		sed "s/<caracter a remplazar>/<caracter al que se remplazara>/g" (g de global o solo hara la primera linea) <archivo a hacer el cambio>
+		
+		tail -n <+(numero)> : mostrara desde un numero de linea epecifico desde arriba a bajo
+		tail -n <numero> : mostrara las ultimas lineas como tan grande sea el numero
+		head -n <numero> : hace lo mismo que el tail pero desde arriba a bajo
+		
+		|||||||redireccion de errores||||||||
+		
+		<comando que tendra el error> 2> <archivo a guardar el error o | siguiente comando > : es para sacar el error y tenerlo guardado
+		
+		VER SERVICIOS EN SEGUNDO PLANO
+		{
+			systemctl status / systemctl status <servicio> : El primero es para ver de forma general que se esta ejecutando en segundo plano, el segundo es para ver los detalles de un servicio en especifico
+			systemctl start <servicio> : es para inicializar un servicio si este no es en segundo plano iniciado y su estatus es desactivado "stoped"
+			systemctl stop <servicio> : es para desactivar un servicio que corre en segundo plano si en su estatus esta "running"
+			systemctl enable <servicio> : es para que el servicio se inicie con el sistema
+			systemctl disable <servicio> : es para que el servicio no se inicie con el sistema
+		}
+		BASH IDIOMA PROGRAMACION
+		{
+			Para hacer variables, no se deja espacio entre el igual y su valor ejemplos
+			
+			variable="Hola Mundo"
+			
+			Para acceder a variables desde la consola se hace con el signo de $ y echo
+			
+			$<variable>
+			
+			Operaciones matemaiticas :
+			
+			expr $a <+|-|*|/> $b (Forma antigua)
+			((c = a + b)) (Forma nueva) y se llama a la nueva variable creada $c
+			
+			EJECUCION DE SCRIPTS
+			
+			bash <script> : ejecutar un script en termial
+			
+			Si el script tiene permiso de ejecucion (chmod u+x <script>) se pondra ejecutar como un .exe pero en el script se pone al principio #!/bin/bash eje
+			
+			#!/bin/bash
+			
+			echo "Hola mundo
+			echo -n <""> : Es para que cuando se imprima no en la siguiente linea sino en la misma linea eje: (Mensaje :| )
+			read <variable> es la forma de hacer un input lee los que se escriba en consola
+			
+			Condicionales if else elif
+			"
+				if [[ $resultado == "y"/[yY] ]]; then					if [[ $variable == "..."/[diferentes opciones] ]]; then			 
+					echo " instalando programa..."					echo <"...">
+				elif [[ $resultado == "n"/[nN]]]; then 				else 
+					echo " No se instalara el programa "				echo <"...">
+				else 
+					echo "Error"
+				fi
+			
+			"
+			operador	significado
+			 -gt		 mayor que (>)
+			 -lt		 menor que (<)
+			 -le		 menor o igual que (<=)
+			 -ge		 mayor o igual que (>=)
+			 -eq		 igual (==)
+			 -ne 		 no igual (!=)
+			 -a		 && (y)
+			 -o 		 or 
+			 -f 		 mira si el argumento/fichero siguiente existe eje 248
+			 -d 		 mira si el directorio dado existe
+			 echo -e   <...\n ...> : salto de linea 
+			Ejemplo:
+			 
+			 if [[ $valor -gt (>) 5]]; then
+			 	echo "..."
+			 Si se usa la expresion -a, se quitan los dobles corchetes. Por que los dobles corchetes es para ahorrarse el -o, el [] significa el -o para las letras
+			 eje:
+			 
+			 if [$valor -ge 5 -a $valor -le 10];  then#
+			 
+			 fi
+			Bluces For,While	, Until(do while),
+			
+			{
+				For (En el for se pueden usar bien las expresiones convencinales (<,>,<=,>=)
+					  
+				for (( i=0; i < $valor; i++ )); do
+					   |	    	 |          |
+				   valor inicial |          |
+				   		condicional      |
+								cantidad a aumentar del valor, si la condicion se cumple
+				done
+				
+				i=0
+				while [$i -lt 1000]
+				do
+					echo "...."
+					((i++))
+				done
+				
+				i=10
+				until [ $i -lt 0 ] do (Si la condicion se cumple, dejara de hacer el ciclo)
+					echo $i
+					((i--))
+				done
+			}
+			
+		
+		Parametros : Dentro del programa se llama parametros 
+		Argumentos : Al escribir los parametros fuera del programa son argumentos
+		
+		Si queremos pasar argumentos por la terminal a un script: ./<script.sh> <arg1 arg2 arg3...>
+		para poder imprimir los argumentos como una lista se hace con un for
+		
+		echo "Pase los argumentos $#" ($# : guardara el numero de argumentos dados)
+		list=$@ (creamos este lista con la variable $@ que es la que guarda todos los argumentos en la lista)
+		
+		for (( i=0 ; i < $# ; i++)); do
+			echo $"{list[$i]}" (se colocan las comillas para que no haya problemas con strings
+		done
+		
+		echo "Dame un archivo txt para imprimir su contenido: $#"
+		
+		if [ -f $1 ]; then
+			cat $1
+		else 
+			echo "Archivo no encontrado o no existe"
+		fi
+		||||||| calcular el peso de ficheros||||||
+			
+			if [ ! -d $1 ]; the
+				echo "El Direcorio no existe..."
+				exit 0						
+			fi
+			
+			for f in `ls $1`; do
+				if [ -f $f ]; then
+					byte=`ls -l $f |cut -d " " -f 5`
+					((suma += $bytes ))
+					 
+				fi
+			done	
+			echo "Total: $suma"
+		}
+		Montar, desmontar y ver Discos
+		sudo fdisk -l : ver los discos
+		sudo umount <punto demontaje(La direccion del usb/disco)> : desmontar el disco
+		sudo mount <punto demontaje(La direccion del usb/disco)> : montar el disco otra vez
+		
+		||||||||||Variables de Entorno||||||||#
+		$HOME : es la variable que contiene la direccion de mi entorno
+		$PWD : contiene la direcion actual
+		Para ver todas las variables se llama al comando [env]
+		
+		cambiar nombre del Host
+		
+		nano /etc/host / /etc/hostname o algo que salga ahi
+		
+		cambiar como muestra donde estamos
+		
+		nano .bashrc 
+		
+		cambiamos la \w\ de promt por una \W\ 
+		
+		Crear comandos: 
+		
+		1. Crear un Directorio de comandos / mover tus comandos al directorio de comandos de linux  /usr/bin (Cuidado con los comandos existentes)
+		2: si creas tu propio Directorio, ir a la configuraciond e bash  'nano .bashrc' , ir al final y poner $PATH=:"$PATH:<Dirrecion de tu carpeta>"
+		
