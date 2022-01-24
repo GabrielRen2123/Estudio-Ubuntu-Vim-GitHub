@@ -12,7 +12,7 @@ Versiones
 		vieja
 		git log / git log --oneline : ver los archivos ya confirmados y su identificador de version
 		git checkout < iniciales del identificador del archivo > : ir a una version en especifico
-		git checkout <nombre de la rama>/master : volver a la ultima version
+		
 	}
 Deshacer cambios y recuperar archivos
 	{
@@ -20,13 +20,13 @@ Deshacer cambios y recuperar archivos
 		git reset --hard <identificador> : los cambios por encima de esa version se borran
 		rm <archivo> : borrar archivo en la carpeta
 		git restore <archivo borrado> : recuperar un archivo que se a borrado, pero no --hard
-		
+		cd .git : carpeta donde esta todo lo de git, incluso los arhcivos guardados
 	}
 subir archivos a mi repositorio en github
 	{
 		git add remote origin git@github.com:GabrielRen2123/Estudio-Ubuntu-Vim-GitHub.git / enlace del repositorio en git hub
 		git remote -v : ver a donde y de donde se descarga codigo
-		git push -u origin master : conectarnos con nuestro repositorio en la nube (Pero antes de eso tener una clave publica)
+		git push -u origin <nombre de la rama/eje master> : conectarnos con nuestro repositorio en la nube (Pero antes de eso tener una clave publica)
 		
 		|||| Claves |||||
 		
@@ -36,5 +36,23 @@ subir archivos a mi repositorio en github
 		cat <clave en .ssh  que acaba en .pub> : para saber el numero de clave para git hub (cat id_ed25519.pub)
 		despues de eso ya se puede subir el codigo
 		git push -u origin master : poner las cosas
+		git pull : bajar los cambios
+		git checkout -b <nombre de la rama> : cambiar de rama
+		
 	}
- 
+mesclar ramas/branch
+	{
+		git branch <nombre>: crear rama
+		git branch : ver en que rama estan sin dar argumento
+		git checkout <nombre de rama> : ir a esa rama
+		git merge <nobmre de rama> : para unir la rama al master, pero se tiene que estar en el master o si no funciona
+		git branch -d < rama>  : eliminar rama
+	}
+resolucion de conflictos
+	{
+		En la alerta de visual darle aceptar o denegar los cambios entrantes
+	}
+rama en local
+	{
+		
+	}
