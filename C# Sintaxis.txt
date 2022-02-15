@@ -84,5 +84,19 @@ POO | CLASES | OBJETOS
        public Coche(<>,<>,<>){}
        
        GETTERS SETTERS
-       
+	<private> double set<>()
+	{	
+	}       
+
+	<public> double get<>()
+	{
+	}
+
+	TODO:
+	En aplicaciones complejas se pueden crear varas clases y para saber a donde seguir el proyecto despues de un tiempo, se coloca un comentario antes de irse a dodne dejaste el proyecto y colocar //TODO:
+	
+	Modularisacion
+	es la forma de organizar nuestro programa en varias clases principales en diferentes ficheros
+	
+	
 */
