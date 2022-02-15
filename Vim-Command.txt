@@ -28,7 +28,7 @@
 		
 		gg : principio del archivo
 		G : final del archivo
-		dd : cortar
+		dd : cortar / borrar la linea
 		yy : copiar
 		p : pegar
 		
@@ -76,4 +76,5 @@
 		control+r = contron-z
 		u = borrar los comabios hechos
 		
+		c+w : borrar solo la palabra al frente para remplazarla
 		

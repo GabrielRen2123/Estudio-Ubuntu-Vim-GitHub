@@ -10,7 +10,7 @@ Versiones
 	{
 		las versiones se mueve de arriba hacia abajo, la version de arriba es la mas reciente y la version de mas abajo es la mas 
 		vieja
-		git log / git log --oneline : ver los archivos ya confirmados y su identificador de version
+		git log / git log --oneline /  git log -n <numero> : ver los archivos ya confirmados y su identificador de version, con el numero mostrara solo los ultimos 3,4,5 o 1 de los commits
 		git checkout < iniciales del identificador del archivo > : ir a una version en especifico
 		
 	}
@@ -19,7 +19,7 @@ Deshacer cambios y recuperar archivos
 		git reset <iniciales del identificador> : sirve para desacer un archivo del stage area
 		git reset --hard <identificador> : los cambios por encima de esa version se borran
 		rm <archivo> : borrar archivo en la carpeta
-		git restore <archivo borrado> : recuperar un archivo que se a borrado, pero no --hard
+		git restore <archivo borrado> : recuperar un archivo que se a borrado, pero no --hard / poner el archivo como estaba en su ultimo commit
 		cd .git : carpeta donde esta todo lo de git, incluso los arhcivos guardados
 	}
 subir archivos a mi repositorio en github
@@ -37,7 +37,7 @@ subir archivos a mi repositorio en github
 		despues de eso ya se puede subir el codigo
 		git push -u origin master : poner las cosas
 		git pull : bajar los cambios
-		git checkout -b <nombre de la rama> : cambiar de rama
+
 		
 	}
 mesclar ramas/branch
@@ -45,14 +45,29 @@ mesclar ramas/branch
 		git branch <nombre>: crear rama
 		git branch : ver en que rama estan sin dar argumento
 		git checkout <nombre de rama> : ir a esa rama
+		git checkout -b <nombre de rama> : crear e ir a la rama
 		git merge <nobmre de rama> : para unir la rama al master, pero se tiene que estar en el master o si no funciona
 		git branch -d < rama>  : eliminar rama
+		git commit --amend -m ".." : cambiar el titulo del commit anterior si se equivocaron en algo
 	}
 resolucion de conflictos
 	{
 		En la alerta de visual darle aceptar o denegar los cambios entrantes
+		o con el archivo abierto se mostrara las dos versiones y solo se tiene que borrar uno de los dos contenidos
 	}
-rama en local
+Rebase Interactivo | comandos no frecuentes
 	{
+		git log --graph : ver de forma grafica las ramas y sus cambios como sus uniones
+		git rebase : limpiar el historial de commits
+		git reabase -i <rama a donde se mezclara> : con el -i es interactivo podemos cambiar los commits y sus argumentos
 		
+		para convinar el commit con el commit anterior se escribira en ligar de 'pick' - 'squash' en el commit a remplazar
 	}
+
+	git stash : guarda en el buffer los cambios hehcos y deja el archivo como estaba en el ultimo commit, sirve para arreglar algo sin perder los cambios hechos
+	git stash --list : muestra lo guardado en el buffer guardados como WIP
+	git stash pop : recuperas los cambios del buffer
+	
+	git tag -a <nombre de la version> -m ".." : crear version 
+	git tag : listado de los tags hehcos
+	git show <nombre de un commit> : muestra toda su informacion

@@ -1,0 +1,86 @@
+ //Esto es un Comentario de una sola linea
+    
+            /*Esto es un comentario
+            de Varias Lineas*/
+
+            /*|||||||IDENTIFICADORES|||||||||
+            
+                Namespaces : PrimeraAplicacion
+                Clases : Program
+                Metodos : Main
+                Variables : edad
+                Constantes : gravedad
+            */
+            
+            /*||||||TIPO DE DATOS|||||||||
+
+                            Entero:                                  Reales:            Booleanos           Texto (utf16)
+                    __________|_____________                            |                   |                 |
+                    |                       |                           |                   |                 |
+                Con Signo               Sin Signo                     float            True or False        string
+                (Distingue Negativo  (No distinge negativo            double                                char
+                y Positivo)             de Positivo)                  decimal
+                
+                sbyte                   byte
+                short                   ushort
+                int                     uint
+                long                    ulong
+            */
+            /*
+           VARIABLES NO MODIFICABLES | CONSTANTES
+           
+           const double PI = 3.14.16; 
+
+POO | CLASES | OBJETOS
+
+       Modificadores de Acceso
+       
+       Public: Accesible desde cualquier parte
+       Private : accesible desde la propia clase
+       Protected: Acessible desde clase derivada (hija)
+       Internal: accesible desde el mismo ensamblado
+       Protected internal: accesible desde el mismo ensamblado o clase derivada de otro emsamblado
+       Private protected: Accesible desde la misma clase o clase Derivada del mismo ensamblado
+       Por defecto: accesible desde el mismo paquete
+       
+       Acceder a Metodos o Variables de otra clase:
+       Para poder hacer esto, las variables y metodos vienen con una proteccion por Default, pero si se le coloca algunos de los Modificadores como el Public, se podra acceder desde otra instacia
+       Ej: 
+       
+       class <>
+       {
+       	public int i = 1;
+       }
+       
+       ENCAPSULACION
+       
+       Privatzar todo excepto lo que sea necesario para que sea Publico.
+      Conveciones
+      
+      las varaibles o metodos que son Publicos, colocarlos con la primera Letra en Mayuscula
+      las no publicas con las letras en Minuscula 
+      
+      CONSTRUCTOR
+      
+       es como el metodo init de python, tendra el mismo nobmre que la clase de forma public y no retornara ningun valor. Su funcion es hacer una plantilla por Default.
+       
+       class Coche
+       {
+       	public Coche()
+       	{
+       		ruedas = 4;
+       		largo = 2300.5;
+       		calefaccion = False;
+       	}	
+       	
+       	private int ruedas;
+       	private double largo;
+       	private boolean calefaccion;
+       }
+       
+       En C# se puede hacer sobrecarga de constructores, se pueden crear mas constructores en una misma clase y con el mismo nombre, solo que los otros podran recibir informacion
+       public Coche(<>,<>,<>){}
+       
+       GETTERS SETTERS
+       
+*/
