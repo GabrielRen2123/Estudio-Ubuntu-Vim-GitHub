@@ -86,6 +86,7 @@ POO | CLASES | OBJETOS
        GETTERS SETTERS
 	<private> double set<>()
 	{	
+		this.<> = <>;
 	}       
 
 	<public> double get<>()
@@ -97,6 +98,7 @@ POO | CLASES | OBJETOS
 	
 	Modularisacion
 	es la forma de organizar nuestro programa en varias clases principales en diferentes ficheros
+	
 	
 	
 */
