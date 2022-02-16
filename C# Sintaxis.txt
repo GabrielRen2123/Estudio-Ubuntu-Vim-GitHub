@@ -99,6 +99,52 @@ POO | CLASES | OBJETOS
 	Modularisacion
 	es la forma de organizar nuestro programa en varias clases principales en diferentes ficheros
 	
+	METODO STATIC
+	 
+	Los metodos Staticos o variables estatcias, son cosas que todo los obejtos creados desde una clase comparten (como todo los metodos etc) la difencia es que ellos no pueden modificar los metodos o variables estaticas
+	para llamar a estas variables toca, llamar a la clase como tal, si la clase se llama Class entonces se usa Class.<>.	Las Variables constantes se toman como Estaticas sin la necesidad de escribir que son estaticas
 	
+	CLASES Anonimas
 	
+	Las clases de Anonimas son clases que no tienen nombre, mienrtas que las clases normales se llaman de alguna forma como class, Clase, PrimerClase etc. Para hacer una clase se escribe
+	public Class 
+	{
+	}
+	Para Anonimas es
+	
+	var <nombre de variable> = new {Donde deberia estar el nombre de la clase, se coloca su contenido}
+	var <> = new {Nombre = "String", int = 2, etc}
+	
+	para acceder a las varaibles de la clase anonima es asi, se llama a la variable que contiene la clase <>.<variable_de_clase> y estas clases no pueden tener metodos
+	
+	ARRAY 
+	Los arrays solo pueden tener datos de un mismo tipo, tambien se pueden hacer array con Obejtos y llamando sus contructores
+	Declaracion: <tipo de dato>[] <nombre>;
+	Iniciacion: <nombre>= new <tipo de dato>[<numero_para_el_espacio_de_datos>]
+	Declara e iniciar <tipo de dato>[] <nombre> = {<...>}	
+	
+	Class Empleados
+	{
+		int edad;
+		string nombre;
+		public Empleados(strin nombre, int edad)
+		{
+			this.nombre = nombre;
+			this.edad = edad;
+		}
+	}
+	
+	Empleados[] <nombre del array> = new Empleados[<numero>];
+	<nombre del array>[<numero>] = new Empleados(Nombre, edad) //Estp es el constructor del array
+	
+	Clases anonimas que contienen array :Diccionarios
+	
+	var <nombre_variable> = new []
+	{
+		new{Nombre="..", Edad=<numero>},
+		new{Nombre="..", Edad=<numero>},
+		new{Nombre="..", Edad=<numero>} <===== separados por comas excepto el ultimo 
+	}; <======= ; al final
+	
+	Console.WriteLine(<nombre de la clase anonima>[1]);
 */
