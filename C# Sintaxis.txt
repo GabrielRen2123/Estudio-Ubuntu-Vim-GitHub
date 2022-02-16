@@ -147,4 +147,37 @@ POO | CLASES | OBJETOS
 	}; <======= ; al final
 	
 	Console.WriteLine(<nombre de la clase anonima>[1]);
+	
+	ARRAY Bidimensional
+	
+        int[,] numeros = new int[6,6]; //creacion del array
+
+        int contador = 0; //contador para hacer el if que dibujara el 0
+
+        for (int a = 0; a < 6; a++)
+
+        {
+
+            for(int b = 0; b < 6; b++)
+
+            {
+
+                if (b<=contador) 
+
+                    numeros[a,b] = 0;
+
+                else
+
+                    numeros[a,b]= 1;
+
+                Console.Write(numeros[a,b]); //se dibuja la primera linea
+
+            }
+
+            Console.WriteLine(" "); //un espacio entre las lineas
+
+            contador++; // asi la condicion siempre queda mayo igual
+
+        }
+
 */
