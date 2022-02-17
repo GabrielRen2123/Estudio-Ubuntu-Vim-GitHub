@@ -1,4 +1,4 @@
-
+ 
 
  //Esto es un Comentario de una sola linea
     
@@ -179,5 +179,16 @@ POO | CLASES | OBJETOS
             contador++; // asi la condicion siempre queda mayo igual
 
         }
+	Herencia
+
+	Para herencia se tiene que tener en cuenta el principio de "es-un", eje, tenemos 3 clases son empleado, director y jefe, para saber el orden, y como se herencian
+	nos preguntamos, es un empleado un director?, si no es un director un empleado?, es un jefe un empleado?, como todos son empleados pero con diferentes puestos
+	ellos heredaran de la clase empleado.
+
+		EMPLEADO
+	___________|____________
+	|			|
+      JEFE		     DIRECTOR
+
 
 */
